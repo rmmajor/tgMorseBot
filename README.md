@@ -1,0 +1,2 @@
+# tgMorseBot
+The bot which turns your text into a Morse code
