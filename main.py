@@ -3,17 +3,19 @@ from pyes import consts
 
 bot = tb.TeleBot(consts.token)
 
+
 def is_coded(c):
-    if 'A' <= c <= 'Z' or 'z' >= c >= 'a' or '0' <= c <= '9':
+    if c in consts.morze:
         return True
     else:
         return False
+
 
 def trans(text):
     res = ''
     for c in text:
         if c == ' ':
-            res += '       '
+            res += '    '
         if is_coded(c):
             res += consts.morze[c] + '   '
         else:
