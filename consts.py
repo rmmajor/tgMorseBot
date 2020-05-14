@@ -1,4 +1,4 @@
-token = "1274839326:AAGNo8YRYK6VZarX17t4g6m5_Mdyeq79O4I"
+token = "<your token>"
 
 morze = {
     # english alphabet
