@@ -2,6 +2,8 @@ token = "<your token>"
 
 mode = 'undefined'
 
+lang = 0
+
 symbs_to_morze = {
     # english alphabet
     'A': '• ‒',
@@ -10,7 +12,7 @@ symbs_to_morze = {
     'b': '‒ • • •',
     'C': '‒ • ‒ •',
     'c': '‒ • ‒ •',
-    'D': '‒ • • ',
+    'D': '‒ • •',
     'd': '‒ • •',
     'E': '•',
     'e': '•',
