@@ -62,8 +62,12 @@ def select_mode(message):
         bot.send_message(message.from_user.id, "Теперь бот будет превращать морзянку в текст")
         consts.mode = False
     elif message.text == 'текст -> Морзе':
-        bot.send_message(message.from_user.id, "Теперь бот будет превращать текст в морзянку")
+        bot.send_message(message.from_user.id, "Теперь бот будет превращать текст в морзянку."
+                                               "Пожалуйста, делайте между тире и точками один пробел, между "
+                                               "зашифроваными буквами три пробела, а между словами семь") 
+                                               
         consts.mode = True
+    else: echo_ans(message)
 
 
 @bot.message_handler(func=lambda message: True, content_types=['text'])
