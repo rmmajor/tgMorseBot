@@ -46,9 +46,9 @@ def untrans(text):
         letters = word.split('   ')
         for letter in letters:
             if is_uncoded(letter):
-                res += consts.morze_to_symbs[letter]
+                res += consts.morze_to_symbs[letter][consts.lang]
             else:
                 res += '[ошибка декодировки]'
         res += ' '
-        
+
     return res
