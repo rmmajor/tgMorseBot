@@ -1,5 +1,5 @@
 import telebot as tb
-from pyes import consts
+
 
 select_mode_mrkp = tb.types.ReplyKeyboardMarkup(resize_keyboard=True)
 select_mode_item1 = tb.types.KeyboardButton('Морзе -> текст')
