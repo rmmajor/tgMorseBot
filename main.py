@@ -1,37 +1,16 @@
 import telebot as tb
 from pyes import consts
+from pyes import translator as tr
 
 bot = tb.TeleBot(consts.token)
 
 
-def is_coded(c):
-    if c in consts.morze:
-        return True
-    else:
-        return False
-
-
-def trans(text):
-    res = ''
-    for c in text:
-        if c == ' ':
-            res += '    '
-        if is_coded(c):
-            res += consts.morze[c] + '   '
-        else:
-            res += c
-    return res
 
 # keyboard cofig
 select_mode_mrkp = tb.types.ReplyKeyboardMarkup(resize_keyboard=True)
 item1 = tb.types.KeyboardButton('Морзе -> текст')
 item2 = tb.types.KeyboardButton('текст -> Морзе')
 select_mode_mrkp.row(item1, item2)
-# select_mode_mrkp.row(item2)
-
-
-# @bot.message_handler(commands=['change_mode'])
-# def change_mode():
 
 
 @bot.message_handler(commands=['help'])
@@ -64,8 +43,8 @@ def select_mode(message):
     elif message.text == 'текст -> Морзе':
         bot.send_message(message.from_user.id, "Теперь бот будет превращать текст в морзянку."
                                                "Пожалуйста, делайте между тире и точками один пробел, между "
-                                               "зашифроваными буквами три пробела, а между словами семь") 
-                                               
+                                               "зашифроваными буквами три пробела, а между словами семь")
+
         consts.mode = True
     else: echo_ans(message)
 
@@ -73,11 +52,10 @@ def select_mode(message):
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def echo_ans(message):
     if consts.mode:
-        ans = trans(message.text)
+        ans = tr.trans(message.text)
     # else:
     # ans = un
     bot.send_message(message.from_user.id, ans)
 
 
 bot.polling()
-# todo помінять словарь на кортеж, реалізувати поіск символа в кортежі, реалізувати обратний перевод, закончить тим самим проект
