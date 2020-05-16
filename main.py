@@ -55,4 +55,4 @@ def callback_query(call):
         bot.answer_callback_query(call.id, "Введите код")
 
 
-bot.polling()
+bot.polling(none_stop=True, interval=0, timeout=0)
