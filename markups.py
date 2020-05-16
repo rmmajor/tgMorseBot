@@ -9,5 +9,5 @@ select_mode_mrkp.row(select_mode_item1, select_mode_item2)
 
 select_lang_mrkp = tb.types.InlineKeyboardMarkup()
 select_lang_mrkp.row_width = 2
-select_lang_mrkp.add(tb.types.InlineKeyboardButton("Русккий, украинский", callback_data="rus"),
+select_lang_mrkp.add(tb.types.InlineKeyboardButton("Русский, украинский", callback_data="rus"),
            tb.types.InlineKeyboardButton("English", callback_data="eng"))
