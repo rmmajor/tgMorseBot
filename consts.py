@@ -1,4 +1,4 @@
-token = "<your token>"
+token = "<your_token>"
 
 mode = 'undefined'
 
