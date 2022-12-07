@@ -100,7 +100,7 @@ symbs_to_morze = {
     '+': '• ‒ • ‒ •',
     '%': '• ‒ ‒ • •',
 
-    # ukrainian / russian alphabet
+    # cyrillic alphabet
     'А': '• ‒',
     'а': '• ‒',
     'Б': '‒ • • •',
